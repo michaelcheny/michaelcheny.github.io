@@ -1,11 +1,11 @@
 # Site settings
 author: Michael Chen
-title: 
+title: Project Week!
 header-img: img/home-bg.png
 email: michaelchengaming@gmail.com
 copyright_name: Michael Chen
 description: > # this means to ignore newlines until "baseurl:"
-  
+  First Project - Ruby CLI Gem
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  michaelcheny
