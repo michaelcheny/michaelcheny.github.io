@@ -55,11 +55,48 @@ CLI.new.call
 After this, I was able to start creating more methods, and thanks to writing pseudo code beforehand, I was never completely zoned out wondering what to do next. Next step was to create a `main_menu` class so user's will be able to choose a category and be shown a list of recipes to choose from. That process wasn't so bad, I created a `get_category_names` method in my `Recipes` class to `collect` all the names of the categories so I would be able to then itererate over them within in my `CLI` class with `each_with_index` and display each category. I did the same for the recipe menu, except this time I passed the user's input as an argument to a `get_recipe_info(input)` method to scrape the second and third level of the website for ingredients, instructions, serving size, and calories. The `display_recipe_info` method also accepted an argument of the recipe, and list out its information. ![](https://i.postimg.cc/0NgXW3gk/Recipedisplay.png)
 
 #### Testing edge cases and control flow
-I added a failsafe in my application so that whenever the user enters an invalid input, it would display an error message and show the options again.
+I added a failsafe in my application so that whenever the user enters an invalid input, it would display an error message and show the options again. This was done by using simple if statements: 
+```ruby
+if input == "b"
+  #go back to previous menu
+elsif input == "m"
+  #go to main menu
+elsif input == "q"
+  #quit the program
+else
+  #show error message, wait 2 seconds, and show the options again
+end	
+```
+I added that in all of the menus that required user input and that turned out to be very smooth through out the program.  It was either enter the right command to move on, or enter something incorrect until you enter the correct command.
 
-TO BE CONTINUED
+#### Explicit self and refactoring
+I know that Ruby is smart and doesn't require explicitly calling `self` in front of the method, but I wanted to do that and build a good habit so transitioning to other languages will feel more natural. I played around with my code as I was finishing up by implicitly calling self, and while that did make my code look a lot more clean, I also wanted the people who'd end up reading my code to better understand what's happening, so I stuck with explicitly calling self on the methods. 
+```ruby
+self.greeting
+self.farewell
+self.main_menu
+```
+I also tried to keep my code as clean as possible by refactoring and creating helper methods throughout the application. Some of the CLI methods required listing out the items in a numbered list format, so I created helpers for those methods:
+```ruby
+def list_with_index_helper(list)
+  list.each_with_index{|item, index| puts "(#{index + 1}) #{item}"}
+end
+```
+I did the same for my `farewell` and `reject_input` method:
+```ruby
+def farewell
+  puts "\nThanks for trying this app out. Stay tuned for more updates and features. Goodbye\n\n"
+  exit
+end
 
+def reject_input
+  puts "\nInvalid input, try again."
+  sleep(2)
+end
+```
 
+#### Conclusion
+I knew that leading up to the project, I would be a nervous wreck, and I was sort of correct because I was, but a few days into it, I began to have a lot of fun by turning a bunch of lines of code, into a working application. I felt like my programming skills went up by several levels through out this project. I was able to read and fix errors much more fluidly, and my creativity got better by being able to design my own application and having it flow the way I want to.  And with the power of scraping, it seems like the ideas are limitless. I cannot wait for more projects like this in the future.
 
 
 
