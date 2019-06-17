@@ -7,7 +7,7 @@ permalink:  my_ruby_cli_gem_-_healthy_recipes
 
 
 #### Reflection
-Oh boy, this project was was a toughy. After a month of Ruby prework, and another 6 weeks of Ruby fundamentals, I've finally made it to the very first project. It's amazing how fast time went by while trying to learn how to program. It felt like just yesterday, I was reading the `Intro to Ruby` lesson on Learn, and learning about Matz, the creator of the Ruby language. After spending many hours working through labs, and reading lessons, I am finally able to put everything together and build my first application A Ruby CLI gem which scrapes the web using `Nokogiri`.
+Oh boy, this project was was both tough, and fun, but more towards the fun side! After a month of Ruby prework, and another 6 weeks of Ruby fundamentals, I've finally made it to the very first project. It's amazing how fast time went by while trying to learn how to program. It felt like just yesterday, I was reading the `Intro to Ruby` lesson on Learn, and learning about Matz, the creator of the Ruby language. After spending many hours working through labs, and reading lessons, I am finally able to put everything together and build my first application A Ruby CLI gem which scrapes the web using `Nokogiri`.
 
 
 #### The hardest part of the project - Overcoming Fear
