@@ -70,3 +70,8 @@ TO BE CONTINUED
 - Using "explicit" self can help transition into other languages even though it's not needed in Ruby. 
 - [Pseudo code](https://en.wikipedia.org/wiki/Pseudocode), [pesudo code](https://www.wikihow.com/Write-Pseudocode), [pseudo code](https://blog.codinghorror.com/pseudocode-or-code/)
 - Run tests very often
+
+
+### A video of my project
+[![](http://img.youtube.com/vi/qmSgfbnx0DY/0.jpg)](http://www.youtube.com/watch?v=qmSgfbnx0DY "Healthy Recipes Ruby CLI Gem")
+
