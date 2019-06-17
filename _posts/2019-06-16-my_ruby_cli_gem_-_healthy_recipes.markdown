@@ -1,22 +1,9 @@
 ---
 layout: post
 title:      "My Ruby CLI Gem - Healthy Recipes"
-date:       2019-06-17 00:45:21 +0000
+date:       2019-06-16 20:45:22 -0400
 permalink:  my_ruby_cli_gem_-_healthy_recipes
 ---
-
-
-The content of your blog post goes here.
-
-1) the brainstorming process
-2) fear 
-2) the initial project that got scraped since it was api and one level deep
-3) why I pick a project about healthy recipes (health is wealth and all that good stuff)
-4) the process of building the app (talk about nokogiri and how you can copy the selectors from chrome to help)
-5) talk bout git commits every few lines of code and blanking out a lot
-6) talk about pseudo coding helping a shit ton
-5) add memes
-6) talk about being able to put everything together from the stuff we learned in labs
 
 
 #### Reflection
