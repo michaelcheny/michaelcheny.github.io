@@ -16,7 +16,7 @@ When I first read the project instructions and requirements, I panicked for a bi
 #### Brainstorming and flaking on my initial project
 Before settling on my current project, I knew I wanted to do something related to health, fitness, or cooking. I've been training powerlifting and preaching the healthy lifestyle for the past 7 years, so this topic was inevitable for me. It was decided, I was going to scrape a food database website and display the food nutritional information for users to see. 
 After finally deciding on `https://www.nutritionix.com/`, I started scraping the API, and getting my pagination set up for it, I thought that everything was going smoothly. Fast forward to 2 days later,**(insert everything is fine while burning meme)** I realized that I was only scraping the first level of the API. All the items I wanted to scrape were available on the first level and the second level just repeated the first level, this was not going to satisfy the multi-layer scrape requirement. Not only that, but it also took forever while loading up the app, since it was scraping **a lot** of foods. 
-![](https://i.postimg.cc/bvrDmZvx/cropofmyfirstproject.png)
+![](https://i.postimg.cc/bvrDmZvx/cropofmyfirstproject.png)![](https://i.postimg.cc/3Nvbmrp7/Oneeternitylater.jpg)
 
 I even added a progress bar to prevent users from thinking my app froze. At the end of the day, I decided to put this project on hold, and transition over to a back-up project. I will come back to this after project week is over!
 
@@ -61,5 +61,12 @@ TO BE CONTINUED
 
 
 #### Tips I picked up from this project
-- Google Chrome and Mozilla Firefox has a "Copy Selector" button to copy and paste the css selector
+- Google Chrome and Mozilla Firefox has a "Copy Selector" button to copy and paste the css selector.
 ![](https://i.postimg.cc/YCgyhS7x/chromecssselectorcopy.png)
+
+- Give variables very meaningful names.
+- Binding.pry is love.
+- Always be mentally aware of where you're currently at in your application (know which methods go where and what they return).
+- Using "explicit" self can help transition into other languages even though it's not needed in Ruby. 
+- [Pseudo code](https://en.wikipedia.org/wiki/Pseudocode), [pesudo code](https://www.wikihow.com/Write-Pseudocode), [pseudo code](https://blog.codinghorror.com/pseudocode-or-code/)
+- Run tests very often
