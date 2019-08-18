@@ -1,12 +1,14 @@
 ---
 layout: post
 title:      "Sinatra Project - The Process of Creating a Calorie Tracking App"
-date:       2019-08-18 14:48:15 +0000
+date:       2019-08-18 10:48:15 -0400
 permalink:  sinatra_project_-_the_process_of_creating_a_calorie_tracking_app
 ---
 
 
+Notes for myself.
 1. Sinatra and this project (why i choose my idea)
+2. database and sql
 2. Setting things up and routing (typos and typos)
 3. validations and showing error codes
 4. Debugging and learning a lot
