@@ -6,16 +6,6 @@ permalink:  sinatra_project_-_the_process_of_creating_a_calorie_tracking_app
 ---
 
 
-Notes for myself.
-1. Sinatra and this project (why i choose my idea)
-2. database and sql
-2. Setting things up and routing (typos and typos)
-3. validations and showing error codes
-4. Debugging and learning a lot
-5. reading the documentation before stack overflow (insert that funny meme)
-5. Building good habits through this project (git commits non stop, good commit messages, etc)
-6. BRB
-
 
 It's been a while since our very first project, which was on Object Oreintated Ruby. Time has come and now we're onto our second project, this one was on Sinatra, a very powerful open sourced web application library that uses the rack web server interface. Upon starting this project, I already felt a lot more confident in my abilities to pull off a project within the timeframe. Planning for this Sinatra Project wasn't as difficult as the first one, we had to create a web application using the CRUD (create, read, update, and delete) fundamentals utilizing a MVC (model view controller). The main purpose of this app was to be able to track something important to me, so that was a no brainer, I immediately decided on building a meal tracking app to supplement with fitness and weight management. This project felt special to me in a way because food and fitness are my passions and I also can't hide the fact that I've put on a good 15 pounds of blubber in the past year or so. I can potentially use this app I've created to manage my eating habits and lifestyle, and continue building on it as I advance further into the curriculum, which is like killing multiple birds with one stone.
 
