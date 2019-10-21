@@ -1,9 +1,13 @@
 ---
 layout: post
 title:      "My Rails Project - Real Life RPG"
-date:       2019-10-21 07:13:06 +0000
+date:       2019-10-21 03:13:07 -0400
 permalink:  my_rails_project_-_real_life_rpg
 ---
+
+
+
+(WORK IN PROGRESS)
 
 
 Blog for my rail's project. Task Tracker / Goal Tracker with a spicy kick to it. Turn you life into a rpg game.
