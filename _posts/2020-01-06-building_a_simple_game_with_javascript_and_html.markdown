@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Building a Simple Game with Javascript and HTML"
-date:       2020-01-06 12:08:20 +0000
+date:       2020-01-06 07:08:21 -0500
 permalink:  building_a_simple_game_with_javascript_and_html
 ---
 
