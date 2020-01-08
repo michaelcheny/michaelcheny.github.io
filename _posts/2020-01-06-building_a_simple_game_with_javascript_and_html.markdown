@@ -63,7 +63,7 @@ spawnFallingObjects() {
   }
 	```
 	
-	
+	The game ends when the player loses all their lives (fouls) by making contact charge objects. Once the game ends, the player is then greeted with the gameover screen. As the transition to gameover is occuring, the game automatically saves the player's game to the backend. This was done by putting a `MutationObserver` on the element that appears with the gameover screen. 
 	
 	
 	
