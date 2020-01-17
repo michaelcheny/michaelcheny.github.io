@@ -7,7 +7,7 @@ permalink:  building_a_simple_game_with_javascript_and_html
 
 
 
-After countless hours of browsing programming memes, and putting in sweat and tears into my Javascript project for a while, I can finally understand why a lot of experienced developers say that Javascript is a weird language. It's one of those languages that doesn't like to throw many errors, because doing so may break the frontend or cause hard to find bugs. Compared to more beginner friendly languages like Ruby, learning to debug issues in Javascript is a skill of its own, and one that I had to develop for this project. 
+After countless hours of browsing programming memes, and putting in sweat and tears into my Javascript project, I can finally understand why a lot of experienced developers say that Javascript is a weird language. It's one of those languages that doesn't like to throw many errors, because doing so may break the frontend or cause hard to find bugs. Compared to more beginner friendly languages like Ruby, learning to debug issues in Javascript is a skill of its own, and one that I had to develop for this project. 
 
 ![](https://i.redd.it/2ekr6czdct341.jpg) 
 
@@ -41,6 +41,7 @@ Javascript-Project/
 	```
 	
 The idea of Floppy Drop was to create a very simple game with a fun theme which required minimal input from the user. Once the page loads, the player is greeted with a screen asking for their name or initials. Initially, I designed it so it would ask for the player's name after the game ends, like a more traditional arcade game, but asking them prior to playing the game accomplished a few things - it allows me to store their name, so I can greet them by name on the next screen, and it allows me to save them as a `Player` on the backend, so they have the ability to play again without having to re-enter their name. The player will then press `enter` to enter the next menu screen, which shows them how to play. The player can now press `enter` or `click` on the game canvas to begin playing. The player controls the head left or right by using the `left` or `right` arrow keys, and they can press `s` to pause during the game. There are three types of objects that the player will come in contact with, a defender, a charge taker, and a referee. Contact with a defender object means that you flop and earn 100 points, contact with a charge taker results in losing 1 life (hard to pull off a flop against a person taking a charge), and contact with a referee results in +500 points, and an extra life. The referees help the most so I made their spawn rates very low compared to the other objects. 
+
 ```
 spawnFallingObjects() {
     setInterval(() => {
@@ -61,16 +62,59 @@ spawnFallingObjects() {
       }
     }, 500);
   }
-	```
-	
-	The game ends when the player loses all their lives (fouls) by making contact charge objects. Once the game ends, the player is then greeted with the gameover screen. As the transition to gameover is occuring, the game automatically saves the player's game to the backend. This was done by putting a `MutationObserver` on the element that appears with the gameover screen. 
+```
 	
 	
+The game ends when the player loses all their lives (fouls) by making contact with charge objects. Once the game ends, the screen transitions to the gameover screen. As the transition to gameover is occuring, the game automatically saves the player's game to the backend. This was done by putting a `MutationObserver` on the element that appears with the gameover screen. 
+	
+```
+    const observer = new MutationObserver(() => {
+      if (this.ratings_Div.style.display == "inline") {
+        this.saveGame();
+      }
+    });
+    observer.observe(this.ratings_Div, { attributes: true });
+```		
+
+This made it possible to save the game to the database automatically, without the need for an extra input/listener from the player. The player also has the option to leave a rating for the game they just played. This was one of the easier parts to set up. 
+
+```
+    <div id="ratings">
+      <h2 id="rating-text">Leave a rating:</h2>
+      <h1>
+        <span data-id="1" class="stars">⭐</span><span data-id="2" class="stars">⭐</span
+        ><span data-id="3" class="stars">⭐</span><span data-id="4" class="stars">⭐</span
+        ><span data-id="5" class="stars">⭐</span>
+      </h1>
+    </div>
+```
+
+The stars were all given an event listener of `click`, so whenever a star was clicked, it triggered the function to save the rating, which is just a patch request to the current game object that was just saved using the mutation observer. Depending on which star they clicked, I was able to grab the `data-id` of that star by setting the rating to the `dataset.id` of the `event.target`: `const rating = event.target.dataset.id;`. 
+
+Pressing `escape` at the gameover screen will trigger `resetGame()` and start a new game by reassigning the game objects to their initial state, and switching the game state back to the main menu page. 
+
+```
+  resetGame() {
+    this.head.position.x = this.gameWidth / 2 - this.head.size.x / 2;
+    this.head.speed = 0;
+    this.score = 0;
+    this.fouls = 2;
+    this.gameState = GAMESTATE.MENU;
+    this.defenders = [];
+    this.allCharge = [];
+    this.refs = [];
+    if (this.stars) this.stars.innerHTML = "Leave a rating:";
+    for (const rating of this.ratings) {
+      rating.style.color = "rgba(255, 255, 255, 0.5)";
+    }
+  }
+```	
+
+This project was definitely the toughest one yet, but also the most fun and rewarding. Dabbling into game development with JavaScript and HTML Canvas was no easy task. I had many frustrating moments where I contemplated scraping the entire project, and doing something easier instead (spoon collection app?). I ran into countless issues trying to set up the game, and encountered more while trying to get the game to play the way I wanted to. At the end, learning to debug and fix those issues felt really rewarding, and I'm glad I went through that. I have new found respect for game developers, and JavaScript developers now after experiencing some of the issues they might face. For anybody who wants to try out Floppy Drop, my github repo for it is https://github.com/michaelcheny/Javascript-project. Please don't be afraid to leave feedback and constructive criticism on how the game can be improved. 
+
 	
 	
-	(explain html canvas and game class)
 	
-	(explain mutation observers)
 	
 	
 
