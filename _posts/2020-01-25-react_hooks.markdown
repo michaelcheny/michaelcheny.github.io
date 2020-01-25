@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React Hooks"
-date:       2020-01-25 07:09:48 +0000
+date:       2020-01-25 02:09:48 -0500
 permalink:  react_hooks
 ---
 
@@ -121,5 +121,5 @@ useEffect(() => {
 }, [count]); // Only re-renders if count changes, otherwise, do nothing.
 ```
 
-This is only a small preview to show the powers of Hooks in React. While this is still fairly new, I think it's a good idea to get exposed to the concept of Hooks. I find Hooks much more user friendly compared to classes, since it does almost everything classes can, without sacrificing much (just make sure to follow the [rules](https://reactjs.org/docs/hooks-rules.html)). The official React Doc states that "There are no plans to remove classes from React", so you don't have to refactor every single one of your classes into functions using Hooks, but instead, you can start to incorporate Hooks in the new code side by side with classes. It will be interesting to see what new and amazing features the React team will deliver in the future. Hopefully they will be game-changers like Hooks.
+This is only a small preview to show the powers of Hooks in React. While this is still fairly new, I think it's a good idea to get exposed to the concept of Hooks. I find Hooks much more user friendly compared to classes, since it allows you to use all React features, without writing classes (just make sure to follow the [rules](https://reactjs.org/docs/hooks-rules.html)). The official React Doc states that "There are no plans to remove classes from React", so you don't have to refactor every single one of your classes into functions using Hooks, but instead, you can start to incorporate Hooks in the new code side by side with classes. It will be interesting to see what new and amazing features the React team will deliver in the future. Hopefully they will be game-changers like Hooks.
 
