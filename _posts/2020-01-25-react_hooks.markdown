@@ -82,7 +82,7 @@ const GifListContainer = () => {
 };
 ```
 
-This resulted in a component that became much easier to work with, especially if I decided to add more in more complex logic. `const [gifs, setGifs] = useState([]);` Over here, we declare a new state variable, called `gifs` and set it to an empty array. The second variable `setGifs` can be named whatever we want, but it if convention to name it the same as our first one, with a prefix of `set`, and this variable replaces `this.setState` from our classical component. With the `setState()` Hook, it is a lot easier to update the state of `gifs`, we just simply pass in the new value of `gifs` into `setGifs("just shove it in here")`.
+This resulted in a component that became much easier to work with, especially if I decided to add more in more complex logic. `const [gifs, setGifs] = useState([]);` Over here, we declare a new state variable, called `gifs` and set it to an empty array. The second variable `setGifs` can be named whatever we want, but it is convention to name it the same as our first one, with a prefix of `set`, and this variable replaces `this.setState` from our classical component. With Hooks, it is a lot easier to update the state of `gifs`, we just simply pass in the new value of `gifs` into `setGifs("just shove it in here")`.
 
 Example:
 
