@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "My Thoughts on Redux (draft)"
-date:       2020-03-25 02:48:58 +0000
+title:      "My Thoughts on Redux "
+date:       2020-03-24 22:48:59 -0400
 permalink:  my_thoughts_on_redux_draft
 ---
 
@@ -44,4 +44,4 @@ ReactDOM.render(
 
 The snippet above goes inside the index.js file of the React app and it gives access to the Redux store. ![](https://media.giphy.com/media/mVk3rRuD8KUko/giphy.gif)
 
-TO BE CONTINUED
+to be continued
